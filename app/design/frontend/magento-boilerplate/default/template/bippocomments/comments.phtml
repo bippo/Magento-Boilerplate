@@ -1,0 +1,42 @@
+<div class="comment-area">
+	<h3 class="comment-form-title">Komentar</h3>
+	<div class="comment-form-message">
+		Tambahkan komentar Anda...
+	</div>
+	<div class="comment-socialmedia">
+		<a href="#" title="Connect to Facebook"><img class="facebook-connect" src="<?php echo $this->getSkinUrl('images/facebook-connect.gif') ?>" alt="Connect to Facebook" /></a>
+		<a href="#" title="Like"><img class="facebook-like" src="<?php echo $this->getSkinUrl('images/facebook-like-icon.gif') ?>" alt="Like"/></a>
+	</div>
+	<form class="comment-form">
+		<textarea class="comment-textarea" rows="5"></textarea>
+		<button class="comment-submit" type="submit">Kirim</button>
+		<div class="comment-post-to">
+			Post ke <input id="comment_post_facebook" type="checkbox" checked="checked" /><label for="comment_post_facebook"> <img src="<?php echo $this->getSkinUrl('images/facebook.png') ?>" alt="Facebook" title="Facebook"/></label>
+			<input id="comment_post_twitter" type="checkbox" checked="checked" /><label for="comment_post_twitter"> <img src="<?php echo $this->getSkinUrl('images/twitter.png') ?>" alt="Twitter" title="Twitter"/></label>
+		</div>	
+	</form>
+	<ul class="comments">
+		<li class="first"><div class="comment-header">
+				<span class="comment-name">Rizky Adhisty</span>
+				<span class="comment-date">12 hours ago</span>
+			</div>
+			<div class="comment-body">
+				Waw ini keren banget...! Aku suka!!!
+			</div></li>
+		<li><div class="comment-header">
+				<span class="comment-name">Hendy Irawan</span>
+				<span class="comment-date">5 days ago</span>
+			</div>
+			<div class="comment-body">
+				Benar-benar mantapphhhhh!!!<br/><br/>
+				Kapan nich ada stok baru??
+			</div></li>
+		<li class="last"><div class="comment-header">
+				<span class="comment-name">Febru Wasono</span>
+				<span class="comment-date">7 days ago</span>
+			</div>
+			<div class="comment-body">
+				Boleh banget boss!!!
+			</div></li>
+	</ul>
+</div>
