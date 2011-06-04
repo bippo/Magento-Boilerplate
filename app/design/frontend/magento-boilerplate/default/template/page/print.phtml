@@ -48,6 +48,7 @@
         <?php endif;?>
     </div>
     <?php echo $this->getChildHtml('content') ?>
+	<div class="after-content"><?php echo $this->getChildHtml('after_content') ?></div> 
     <div class="buttons-set">
         <button type="button" title="<?php echo $this->__('Close Window') ?>" class="button" onclick="window.close();"><span><span><?php echo $this->__('Close Window') ?></span></span></button>
     </div>

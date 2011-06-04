@@ -34,6 +34,11 @@
 
         <!--End "Adding items" -->
 	</reference>
+	<reference name="root">
+		<block type="core/text_list" name="after_content" />
+	</reference> 
+	<reference name="after_content">
+	</reference> 
 </default>
 
 <!-- Begin set Catalog Pages default layout to 2columns-left -->
