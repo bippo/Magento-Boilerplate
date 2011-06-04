@@ -24,3 +24,8 @@ col2-left / col2-right :
 col3 :
 
 - .col-main : 475px
+
+Source Code Repository
+----------------------
+Project Home: https://github.com/bippo/Magento-Boilerplate
+Git URL: git@github.com:bippo/Magento-Boilerplate.git
