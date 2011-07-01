@@ -35,6 +35,9 @@
         <!--End "Adding items" -->
 	</reference>
 	<reference name="root">
+		<block type="core/text_list" name="breadcrumbs_panel"/>
+		<block type="core/text_list" name="before_breadcrumbs"/>
+		<block type="core/text_list" name="after_breadcrumbs"/>
 		<block type="core/text_list" name="after_content" />
 	</reference> 
 	<reference name="after_content">

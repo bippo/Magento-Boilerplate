@@ -47,7 +47,10 @@
         <?php echo $this->getChildHtml('header') ?>
         <div class="main-container col3-layout">
             <div class="main">
+            	<div class="before-breadcrumbs"><?php echo $this->getChildHtml('before_breadcrumbs') ?></div>
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
+            	<div class="breadcrumbs-panel"><?php echo $this->getChildHtml('breadcrumbs_panel') ?></div>
+                <div class="after-breadcrumbs"><?php echo $this->getChildHtml('after_breadcrumbs') ?></div>
                 <div class="col-wrapper">
                     <div class="col-main">
                         <?php echo $this->getChildHtml('global_messages') ?>
