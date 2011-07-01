@@ -38,7 +38,7 @@
 		<block type="core/text_list" name="after_content" />
 	</reference> 
 	<reference name="after_content">
-		<block type="core/template" name="bippo_comments" template="bippocomments/comments.phtml" />
+<!-- 		<block type="core/template" name="bippo_comments" template="bippocomments/comments.phtml" /> -->
 	</reference> 
 </default>
 
