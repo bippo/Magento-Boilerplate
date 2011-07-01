@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="bippoboilerplate-theme">
+	<property file="theme.properties"/>
+	<property file="development.properties"/>
+    <property file="deploy.properties"/>
+
+	<fail unless="theme.name"/>
+	<fail unless="theme.package"/>
+	<fail unless="theme.interface"/>
+	
+	<target name="symlink.create" description="Create symlinks to ${theme.package}/${theme.interface} theme in ${magento.dir}. It will not overwrite existing files/links.">
+		<fail unless="magento.dir"/>
+		
+		<mkdir dir="${magento.dir}/app/design/frontend/${theme.package}"/>
+		<symlink link="${magento.dir}/app/design/frontend/${theme.package}/" resource="${basedir}/app/design/frontend/${theme.package}/${theme.interface}" failonerror="false"/>
+		<symlink link="${magento.dir}/skin/frontend/${theme.package}/" resource="${basedir}/skin/frontend/${theme.package}/${theme.interface}" failonerror="false"/>
+	</target>
+    
+	<target name="symlink.delete" description="Delete symlinks to ${theme.package}/${theme.interface} theme in ${magento.dir}. It will only delete files or symlinks, not directories.">
+		<fail unless="magento.dir"/>
+		
+		<symlink action="delete" link="${magento.dir}/app/design/frontend/${theme.package}/${theme.interface}" />
+		<symlink action="delete" link="${magento.dir}/skin/frontend/${theme.package}/${theme.interface}" />
+	</target>
+
+    <target name="deploy"
+		description="Deploy ${theme.name} theme files to ${server.user}@${server.host}:${server.dir} at port ${server.port}. Useful during development.">
+    	<fail unless="server.user"/>
+    	<fail unless="server.host"/>
+    	<fail unless="server.port"/>
+    	<fail unless="server.dir"/>
+		<exec executable="rsync">
+			<arg value="-e"/>
+			<arg value="ssh -p${server.port}"/>
+			<arg value="-vza"/>
+			<arg value="--relative"/>
+			<arg value="--delete"/>
+			<arg value="app/design/frontend/${theme.package}/${theme.interface}"/>
+			<arg value="skin/frontend/${theme.package}/${theme.interface}"/>
+			<arg value="${server.user}@${server.host}:${server.dir}" />
+		</exec>
+    </target>
+	
+</project>

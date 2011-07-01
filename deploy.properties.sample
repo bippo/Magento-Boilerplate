@@ -1,0 +1,4 @@
+server.host=sandbox.local
+server.user=sandbox
+server.dir=public_html/sandbox1
+server.port=22
